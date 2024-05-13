@@ -1,0 +1,14 @@
+/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-16.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-43FFF67504C1B77C_14.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-43FFF67504C1B77C_15.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-43FFF67504C1B77C_16.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-B4B9E3881B00232E_14.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-B4B9E3881B00232E_15.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/burst-llvm-B4B9E3881B00232E_16.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/hostlin/dsymutil filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/hostmac/dsymutil filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/hostwin/dsymutil.exe filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/libburst-llvm-10.dylib filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/libburst-llvm-16.dylib filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.12/.Runtime/libburst-llvm-16.so filter=lfs diff=lfs merge=lfs -text
