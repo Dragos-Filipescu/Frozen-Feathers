@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{61BE124F-6C4C-3AAC-779A-93A83DF83DB0}</ProjectGuid>
+    <ProjectGuid>{43A86CB4-B86B-1C5B-1BAF-5554D1C7A492}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>kcp2k</AssemblyName>
@@ -993,7 +993,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{04B0E564-0376-461B-74E4-54B3080BE30D}</Project>
+      <Project>{B25B952B-4041-319E-48ED-3C8915639296}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
   </ItemGroup>

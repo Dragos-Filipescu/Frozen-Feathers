@@ -100,9 +100,11 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  cards:
+  cardPrefabs:
   - {fileID: 111910021463681504, guid: a32edce57f2e98b40aefc28329135efa, type: 3}
   - {fileID: 111910021463681504, guid: 7b852d7ccf8f6b842853839208777f72, type: 3}
+  - {fileID: 111910021463681504, guid: 04680e0efe0a9b94b8b3476aa0b1b0da, type: 3}
   playerArea: {fileID: 0}
   enemyArea: {fileID: 0}
   dropZone: {fileID: 0}
+  drawPile: {fileID: 0}

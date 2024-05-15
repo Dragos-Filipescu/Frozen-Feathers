@@ -18,8 +18,12 @@ public class DrawCard : NetworkBehaviour
 
     public void OnClick()
     {
-        NetworkIdentity networkIdentity = NetworkClient.connection.identity;
-        playerManager = networkIdentity.GetComponent<PlayerManager>();
+        if (playerManager == null)
+        {
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            playerManager = networkIdentity.GetComponent<PlayerManager>();
+        }
+        
         playerManager.CmdDealCard();
     }
 }

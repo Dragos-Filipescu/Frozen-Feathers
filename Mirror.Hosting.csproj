@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{301970DF-CC3D-F682-446E-0992D2200489}</ProjectGuid>
+    <ProjectGuid>{3689FE2A-E1CC-4669-1D7F-1112B6795031}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.Hosting</AssemblyName>

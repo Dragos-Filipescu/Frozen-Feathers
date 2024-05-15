@@ -3,15 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.iOS;
 
 public class CardManager : MonoBehaviour
 {
     private const int maxCards = 7;
     private const int cardSpacing = 20;
     private readonly Vector2 cardSize = new(120f, 177f);
-
-    private readonly System.Random cardPicker = new();
 
     public GameObject[] cardPrefabs;
 
@@ -198,29 +195,13 @@ public class CardManager : MonoBehaviour
     {
         cards = new(maxCards);
         drawPile = GameObject.Find("DrawPile").transform;
-        StartCoroutine(DrawInitialHand());
-    }
-
-    IEnumerator DrawInitialHand()
-    {
-        for (int i = 0; i < maxCards; i++)
-        {
-            DrawCard();
-            yield return new WaitForSeconds(0.5f);
-        }
     }
 
     /// <summary>
     /// Draw a card from the draw pile.
     /// </summary>
-    public void DrawCard()
+    public void DrawCard(GameObject card)
     {
-        AppendCard(
-            Instantiate(
-                cardPrefabs[cardPicker.Next(0, cardPrefabs.Count())],
-                drawPile.transform.position,
-                Quaternion.identity
-                )
-            );
+        AppendCard(card);
     }
 }

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{519D0D30-CB06-47A9-DCB9-BDA32C28CC6F}</ProjectGuid>
+    <ProjectGuid>{C7CDF771-6F16-BDF9-37AA-4E712FB355A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.CompilerSymbols</AssemblyName>

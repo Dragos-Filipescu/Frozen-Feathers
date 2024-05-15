@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5DFA36AF-3DAD-B657-C47E-68AEF0A65661}</ProjectGuid>
+    <ProjectGuid>{31C0715B-AF92-C764-4D50-4B88BC546492}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Mirror.Examples</AssemblyName>
@@ -1102,15 +1102,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{04B0E564-0376-461B-74E4-54B3080BE30D}</Project>
+      <Project>{B25B952B-4041-319E-48ED-3C8915639296}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{90AD6DB5-B279-3066-0270-9FF1B1BC79A0}</Project>
+      <Project>{78C7C621-58BC-1F54-1733-45355C8EAB97}</Project>
       <Name>Mirror.Components</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Transports.csproj">
-      <Project>{A5924B29-5CD9-9FD7-460F-077A2A766A81}</Project>
+      <Project>{C03AFB38-CBC0-C277-C4D4-40CB19C5A4D9}</Project>
       <Name>Mirror.Transports</Name>
     </ProjectReference>
   </ItemGroup>

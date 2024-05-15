@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{122B5A3B-1E3B-1A97-45F1-B6D203DB5727}</ProjectGuid>
+    <ProjectGuid>{B4DDA847-F5F1-7F26-0983-A3A31F33DE55}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -1128,51 +1128,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Mirror.Editor.csproj">
-      <Project>{91648934-C821-9D68-4DD8-A0487C53E6D3}</Project>
+      <Project>{CF084F4B-A142-68D3-F99C-2F43D6E18CD5}</Project>
       <Name>Mirror.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Telepathy.csproj">
-      <Project>{524E5DCF-7B9A-5942-795D-69DB769C2A3D}</Project>
+      <Project>{25C4DEFE-9C5A-996E-152C-DCF7236D1224}</Project>
       <Name>Telepathy</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{5DFA36AF-3DAD-B657-C47E-68AEF0A65661}</Project>
+      <Project>{31C0715B-AF92-C764-4D50-4B88BC546492}</Project>
       <Name>Mirror.Examples</Name>
     </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
-      <Project>{61BE124F-6C4C-3AAC-779A-93A83DF83DB0}</Project>
+      <Project>{43A86CB4-B86B-1C5B-1BAF-5554D1C7A492}</Project>
       <Name>kcp2k</Name>
     </ProjectReference>
     <ProjectReference Include="EncryptionTransportEditor.csproj">
-      <Project>{30F37850-6B18-983A-9F87-CB3F9EAF7E36}</Project>
+      <Project>{4849E895-EF5A-52CA-44A2-159389925A34}</Project>
       <Name>EncryptionTransportEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
-      <Project>{04B0E564-0376-461B-74E4-54B3080BE30D}</Project>
+      <Project>{B25B952B-4041-319E-48ED-3C8915639296}</Project>
       <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Transports.csproj">
-      <Project>{A5924B29-5CD9-9FD7-460F-077A2A766A81}</Project>
+      <Project>{C03AFB38-CBC0-C277-C4D4-40CB19C5A4D9}</Project>
       <Name>Mirror.Transports</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{90AD6DB5-B279-3066-0270-9FF1B1BC79A0}</Project>
+      <Project>{78C7C621-58BC-1F54-1733-45355C8EAB97}</Project>
       <Name>Mirror.Components</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
-      <Project>{BD3247AB-A5E1-94B4-AC5A-42163112416B}</Project>
+      <Project>{4D8326D2-4E03-49F8-1CBA-3950C28C4BBD}</Project>
       <Name>SimpleWebTransport</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
-      <Project>{519D0D30-CB06-47A9-DCB9-BDA32C28CC6F}</Project>
+      <Project>{C7CDF771-6F16-BDF9-37AA-4E712FB355A3}</Project>
       <Name>Mirror.CompilerSymbols</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Authenticators.csproj">
-      <Project>{BAAA1A6E-A61C-49B7-9DC4-4A9FC951379B}</Project>
+      <Project>{463B7304-34B0-410D-8CA1-6C42CF6C8BC8}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Hosting.csproj">
-      <Project>{301970DF-CC3D-F682-446E-0992D2200489}</Project>
+      <Project>{3689FE2A-E1CC-4669-1D7F-1112B6795031}</Project>
       <Name>Mirror.Hosting</Name>
     </ProjectReference>
   </ItemGroup>
