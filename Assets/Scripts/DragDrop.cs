@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Mirror;
 
-public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragDrop : NetworkBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public PlayerManager playerManager;
     private CardManager handManager;
-    private DropZoneManager dropZoneManager;
     private GameObject canvas;
-    private bool isOverDropZone;
+    private bool isOverDropZone = false;
+    private bool isDraggable = false;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -29,6 +31,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!isDraggable) { return; }
+
         if (transform.parent.CompareTag("DropZone"))
         {
             return;
@@ -50,6 +54,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!isDraggable) { return; }
+
         if (transform.parent.CompareTag("DropZone"))
         {
             return;
@@ -57,7 +63,10 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         if (isOverDropZone)
         {
-            dropZoneManager.AddCard(gameObject);
+            isDraggable = false;
+            NetworkIdentity networkIdentity = NetworkClient.connection.identity;
+            playerManager = networkIdentity.GetComponent<PlayerManager>();
+            playerManager.PlayCard(gameObject);
         }
         else
         {
@@ -70,6 +79,10 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         canvas = GameObject.Find("Main Canvas");
         handManager = GameObject.Find("PlayerArea").GetComponent<CardManager>();
-        dropZoneManager = GameObject.Find("DropZone").GetComponent<DropZoneManager>();
+
+        if (isOwned)
+        {
+            isDraggable = true;
+        }
     }
 }

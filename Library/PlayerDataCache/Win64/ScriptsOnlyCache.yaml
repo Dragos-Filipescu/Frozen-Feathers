@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CardId
     - CardManager
     - DragDrop
     - DrawCard
@@ -132,51 +133,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1612}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 1678}
+      Script: {instanceID: 1666}
     - Class: 114
-      Script: {instanceID: 1702}
+      Script: {instanceID: 1690}
     - Class: 114
-      Script: {instanceID: 2544}
+      Script: {instanceID: 2472}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3528}
+      Script: {instanceID: 3384}
     - Class: 114
-      Script: {instanceID: 4116}
+      Script: {instanceID: 3934}
     - Class: 114
-      Script: {instanceID: 4124}
+      Script: {instanceID: 3942}
     - Class: 114
-      Script: {instanceID: 4722}
+      Script: {instanceID: 4510}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 4816}
     - Class: 114
-      Script: {instanceID: 5380}
+      Script: {instanceID: 5120}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5270}
     - Class: 114
-      Script: {instanceID: 5754}
+      Script: {instanceID: 5474}
     - Class: 114
-      Script: {instanceID: 5916}
+      Script: {instanceID: 5624}
     - Class: 114
-      Script: {instanceID: 5956}
+      Script: {instanceID: 5658}
     - Class: 114
-      Script: {instanceID: 6096}
+      Script: {instanceID: 5790}
     - Class: 114
-      Script: {instanceID: 6540}
+      Script: {instanceID: 6196}
     - Class: 114
-      Script: {instanceID: 6656}
+      Script: {instanceID: 6316}
     - Class: 114
-      Script: {instanceID: 7046}
+      Script: {instanceID: 6688}
     - Class: 114
-      Script: {instanceID: 8176}
+      Script: {instanceID: 7748}
     - Class: 114
-      Script: {instanceID: 8684}
+      Script: {instanceID: 8226}
     - Class: 114
-      Script: {instanceID: 10152}
+      Script: {instanceID: 9600}
+    - Class: 114
+      Script: {instanceID: 29724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -942,7 +945,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8c407150b214c9b43a0884cf2657b163
+      Hash: 820117ecc53570e3cef6d5112fa2aa1a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerManager
@@ -1086,7 +1089,7 @@ ScriptsOnlyBuild:
     className: MatchController
   - hash:
       serializedVersion: 2
-      Hash: 1505cebb54d3dd3d5bfd7c624a50dfef
+      Hash: 3cc9e437e01465caac53251d397214e4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: DragDrop
@@ -2124,16 +2127,16 @@ ScriptsOnlyBuild:
     className: NetworkTransformReliable
   - hash:
       serializedVersion: 2
-      Hash: d0392b7f3f52d5af537ade186b4f51f1
-    assemblyName: Unity.Timeline
-    namespaceName: UnityEngine.Timeline
-    className: ControlTrack
-  - hash:
-      serializedVersion: 2
       Hash: e20a6de5f1fd1dfae6f1186e8f77c3d9
     assemblyName: Unity.2D.Animation.Runtime
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteResolver
+  - hash:
+      serializedVersion: 2
+      Hash: d0392b7f3f52d5af537ade186b4f51f1
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ControlTrack
   - hash:
       serializedVersion: 2
       Hash: 5ec0c22faee52a0e2e6b17d83e1618a9
@@ -2386,6 +2389,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 9810fef7a3c2f131d03075b3b7c25026
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CardId
   platform: 19
   scenePathNames:
   - Assets/Scenes/GameScreen.unity
