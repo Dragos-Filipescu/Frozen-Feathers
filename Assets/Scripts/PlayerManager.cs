@@ -16,10 +16,11 @@ public class PlayerManager : NetworkBehaviour
 
     public GameObject[] cardPrefabs;
 
-    public GameObject playerArea;
-    public GameObject enemyArea;
-    public GameObject dropZone;
-    public GameObject drawPile;
+    private GameObject playerArea;
+    private GameObject enemyArea;
+    private GameObject dropZone;
+    private GameObject drawPile;
+    private DropZoneManager dropZoneManager;
     private CardManager playerAreaCardManager;
     private CardManager enemyAreaCardManager;
 
@@ -50,6 +51,7 @@ public class PlayerManager : NetworkBehaviour
         dropZone = GameObject.Find("DropZone");
         drawPile = GameObject.Find("DrawPile");
 
+        dropZoneManager = dropZone.GetComponent<DropZoneManager>();
         playerAreaCardManager = playerArea.GetComponent<CardManager>();
         enemyAreaCardManager = enemyArea.GetComponent<CardManager>();
     }
@@ -64,6 +66,7 @@ public class PlayerManager : NetworkBehaviour
         dropZone = GameObject.Find("DropZone");
         drawPile = GameObject.Find("DrawPile");
 
+        dropZoneManager = dropZone.GetComponent<DropZoneManager>();
         playerAreaCardManager = playerArea.GetComponent<CardManager>();
         enemyAreaCardManager = enemyArea.GetComponent<CardManager>();
     }
@@ -80,6 +83,17 @@ public class PlayerManager : NetworkBehaviour
         RpcShowCard(card, CardActionType.Dealt);
     }
 
+    public void PlayCard(GameObject card)
+    {
+        CmdPlayCard(card);
+    }
+
+    [Command]
+    void CmdPlayCard(GameObject card)
+    {
+        RpcShowCard(card, CardActionType.Played);
+    }
+
     [ClientRpc]
     void RpcShowCard(GameObject card, CardActionType type)
     {
@@ -89,16 +103,17 @@ public class PlayerManager : NetworkBehaviour
                 {
                     if (isOwned)
                     {
-                        playerAreaCardManager.DrawCard(card);
+                        playerAreaCardManager.AppendCard(card);
                     }
                     else
                     {
-                        enemyAreaCardManager.DrawCard(card);
+                        enemyAreaCardManager.AppendCard(card);
                     }
                     break;
                 }
             case CardActionType.Played:
                 {
+                    dropZoneManager.AddCard(card);
                     break;
                 }
             default:
