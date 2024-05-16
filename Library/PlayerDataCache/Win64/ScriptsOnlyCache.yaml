@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CardManager
     - DragDrop
     - DrawCard
+    - DrawPile
     - DropZoneManager
     - PlayerManager
     Mirror.Components.dll:
@@ -40,8 +41,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.RandomBrush
     Unity.Netcode.Editor.dll:
     - Unity.Netcode.Editor.Configuration.NetcodeForGameObjectsProjectSettings
-    Unity.Netcode.Runtime.dll:
-    - Unity.Netcode.NetworkPrefabsList
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -132,51 +131,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1612}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 1678}
+      Script: {instanceID: 1666}
     - Class: 114
-      Script: {instanceID: 1702}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2544}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3528}
+      Script: {instanceID: 3382}
     - Class: 114
-      Script: {instanceID: 4116}
+      Script: {instanceID: 3932}
     - Class: 114
-      Script: {instanceID: 4124}
+      Script: {instanceID: 3940}
     - Class: 114
-      Script: {instanceID: 4722}
+      Script: {instanceID: 4508}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 4814}
     - Class: 114
-      Script: {instanceID: 5380}
+      Script: {instanceID: 5118}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5268}
     - Class: 114
-      Script: {instanceID: 5754}
+      Script: {instanceID: 5472}
     - Class: 114
-      Script: {instanceID: 5916}
+      Script: {instanceID: 5622}
     - Class: 114
-      Script: {instanceID: 5956}
+      Script: {instanceID: 5656}
     - Class: 114
-      Script: {instanceID: 6096}
+      Script: {instanceID: 5788}
     - Class: 114
-      Script: {instanceID: 6540}
+      Script: {instanceID: 6194}
     - Class: 114
-      Script: {instanceID: 6656}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 7046}
+      Script: {instanceID: 6686}
     - Class: 114
-      Script: {instanceID: 8176}
+      Script: {instanceID: 7746}
     - Class: 114
-      Script: {instanceID: 8684}
+      Script: {instanceID: 8224}
     - Class: 114
-      Script: {instanceID: 10152}
+      Script: {instanceID: 9598}
+    - Class: 114
+      Script: {instanceID: 10930}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -250,12 +251,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
-  - hash:
-      serializedVersion: 2
-      Hash: 515c3447ea696ca0729e8a7d022bbcc7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DropZoneManager
   - hash:
       serializedVersion: 2
       Hash: d75df0b83c74ab3d9088964ef8188507
@@ -2124,16 +2119,16 @@ ScriptsOnlyBuild:
     className: NetworkTransformReliable
   - hash:
       serializedVersion: 2
-      Hash: d0392b7f3f52d5af537ade186b4f51f1
-    assemblyName: Unity.Timeline
-    namespaceName: UnityEngine.Timeline
-    className: ControlTrack
-  - hash:
-      serializedVersion: 2
       Hash: e20a6de5f1fd1dfae6f1186e8f77c3d9
     assemblyName: Unity.2D.Animation.Runtime
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteResolver
+  - hash:
+      serializedVersion: 2
+      Hash: d0392b7f3f52d5af537ade186b4f51f1
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ControlTrack
   - hash:
       serializedVersion: 2
       Hash: 5ec0c22faee52a0e2e6b17d83e1618a9
@@ -2386,7 +2381,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 515c3447ea696ca0729e8a7d022bbcc7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DropZoneManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/GameScreen.unity
-  playerPath: D:/Unity Projects/Frozen Feathers/Frozen-Feathers/Build/Frozen Feathers.exe
+  playerPath: E:/ProiectUnity/Frozen-Feathers/Build/Frozen Feathers.exe

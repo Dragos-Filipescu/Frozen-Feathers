@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class DrawPile : MonoBehaviour
 {
-    private const int maxPileSize = 100;
+    private const int maxPileSize = 10;
     public GameObject[] cardPrefabs;
-    private Stack<GameObject> drawPile = new(maxPileSize);
+    private Stack<GameObject> drawPile = new Stack<GameObject>(maxPileSize);
 
     // Start is called before the first frame update
     void Start()
     {
+    
         for (int i = 0; i < maxPileSize; i++)
         {
             drawPile.Push(
@@ -35,7 +36,25 @@ public class DrawPile : MonoBehaviour
 
         return result;
     }
+    public Stack<GameObject> GetDeck()
+    {
 
+        return drawPile;
+    }
+    public void InitCards()
+    {
+        Debug.LogWarning("Draw pile empty");
+        for (int i = 0; i < maxPileSize; i++)
+        {
+            drawPile.Push(
+                Instantiate(
+                    cardPrefabs[Random.Range(0, cardPrefabs.Length)],
+                    transform.position,
+                    Quaternion.identity
+                    )
+                );
+        }
+    }
     public void AddCard(GameObject card)
     {
 

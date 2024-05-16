@@ -75,7 +75,9 @@ public class CardManager : MonoBehaviour
         if (cards.Count == 0)
         {
             Vector3 newPos = new(transform.position.x, transform.position.y, transform.position.z);
-            iTween.MoveTo(card, newPos, 0.5f);
+            // iTween.MoveTo(card, newPos, 0.5f);
+            card.transform.position = newPos;
+
             card.transform.SetParent(transform);
             cards.Add(card);
             return;
@@ -107,7 +109,8 @@ public class CardManager : MonoBehaviour
                 cards[i].transform.position.y,
                 cards[i].transform.position.z
                 );
-            iTween.MoveTo(cards[i], newPos, 0.1f);
+            // iTween.MoveTo(cards[i], newPos, 0.1f);
+            cards[i].transform.position = newPos;
         }
 
         for (int i = position; i < cards.Count; i++)
@@ -117,10 +120,13 @@ public class CardManager : MonoBehaviour
                 cards[i].transform.position.y,
                 cards[i].transform.position.z
                 );
-            iTween.MoveTo(cards[i], newPos, 0.1f);
+            //iTween.MoveTo(cards[i], newPos, 0.1f);
+            cards[i].transform.position = newPos;
+
         }
 
-        iTween.MoveTo(card, expectedPos, 0.2f);
+        //iTween.MoveTo(card, expectedPos, 0.2f);
+        card.transform.position = expectedPos;
         card.transform.SetParent(transform);
         cards.Insert(position, card);
     }
@@ -176,7 +182,9 @@ public class CardManager : MonoBehaviour
                 cards[i].transform.position.z
                 );
 
-            iTween.MoveTo(cards[i], newPos, 0.1f);
+            //iTween.MoveTo(cards[i], newPos, 0.1f);
+            cards[i].transform.position = newPos;
+
         }
 
         for (int i = position; i < cards.Count; i++)
@@ -187,7 +195,9 @@ public class CardManager : MonoBehaviour
                 cards[i].transform.position.z
                 );
 
-            iTween.MoveTo(cards[i], newPos, 0.1f);
+            //iTween.MoveTo(cards[i], newPos, 0.1f);
+            cards[i].transform.position = newPos;
+
         }
     }
 

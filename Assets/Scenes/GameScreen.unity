@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 9012728601327606640}
   - component: {fileID: 7542113623788444375}
   - component: {fileID: 5812105835006453721}
+  - component: {fileID: 9012728601327606641}
   m_Layer: 5
   m_Name: DrawPile
   m_TagString: Untagged
@@ -2103,6 +2104,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9012728601327606641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515745800810052274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78ce9ddb54781e46b70bf3163174df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPrefabs:
+  - {fileID: 111910021463681504, guid: 7b852d7ccf8f6b842853839208777f72, type: 3}
+  - {fileID: 111910021463681504, guid: 04680e0efe0a9b94b8b3476aa0b1b0da, type: 3}
+  - {fileID: 111910021463681504, guid: a32edce57f2e98b40aefc28329135efa, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

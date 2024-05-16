@@ -22,7 +22,8 @@ public class PlayerManager : NetworkBehaviour
     public GameObject drawPile;
     private CardManager playerAreaCardManager;
     private CardManager enemyAreaCardManager;
-
+    private DrawPile drawPileManager;
+    private DrawPile dP;
     private readonly System.Random cardPicker = new();
 
     //IEnumerator DrawInitialHand()
@@ -49,6 +50,7 @@ public class PlayerManager : NetworkBehaviour
         enemyArea = GameObject.Find("EnemyArea");
         dropZone = GameObject.Find("DropZone");
         drawPile = GameObject.Find("DrawPile");
+        drawPileManager = drawPile.GetComponent<DrawPile>();
 
         playerAreaCardManager = playerArea.GetComponent<CardManager>();
         enemyAreaCardManager = enemyArea.GetComponent<CardManager>();
@@ -63,7 +65,7 @@ public class PlayerManager : NetworkBehaviour
         enemyArea = GameObject.Find("EnemyArea");
         dropZone = GameObject.Find("DropZone");
         drawPile = GameObject.Find("DrawPile");
-
+        drawPileManager = drawPile.GetComponent<DrawPile>();
         playerAreaCardManager = playerArea.GetComponent<CardManager>();
         enemyAreaCardManager = enemyArea.GetComponent<CardManager>();
     }
@@ -71,13 +73,25 @@ public class PlayerManager : NetworkBehaviour
     [Command]
     public void CmdDealCard()
     {
-        GameObject card = Instantiate(
-                cardPrefabs[cardPicker.Next(0, cardPrefabs.Count())],
-                drawPile.transform.position,
-                Quaternion.identity
-                );
-        NetworkServer.Spawn(card, connectionToClient);
-        RpcShowCard(card, CardActionType.Dealt);
+        //GameObject card = Instantiate(
+        //        cardPrefabs[cardPicker.Next(0, cardPrefabs.Count())],
+        //        drawPile.transform.position,
+        //        Quaternion.identity
+        //        );
+        GameObject card;
+        if (drawPileManager.GetDeck().Count > 0)
+        {
+             card = drawPileManager.ServeCard();
+            NetworkServer.Spawn(card, connectionToClient);
+            RpcShowCard(card, CardActionType.Dealt);
+        }
+        else
+        {
+            //drawPileManager.InitCards();
+            Debug.LogWarning("Draw pile empty");
+           // card = drawPileManager.ServeCard();
+        }
+        
     }
 
     [ClientRpc]
